@@ -1,0 +1,110 @@
+@import 'theme/theme';
+.index {
+    background-color: $black;
+    .main {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    .main-bg {
+        position: relative;
+        &::before {
+            width: 100%;
+            height: 100%;
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            background-image: url("../img/landing-img-mobile.svg");
+            background-position: top center;
+            background-repeat: no-repeat;
+            z-index: -1;
+            background-size: contain;
+            @include media-breakpoint-up(sm) {
+                background-image: url("../img/landing-img-desktop.svg");
+            }
+        }
+    }
+    .hero {
+        position: relative;
+        @include media-breakpoint-down(lg) {
+            padding: 0;
+        }
+    }
+    .read-more-link {
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: $yellow;
+        @include media-breakpoint-down(lg) {
+            font-size: .875rem;
+            font-weight: 600;
+        }
+        &:hover {
+            color: $yellow;
+        }
+        .show-expanded {
+            display: none;
+        }
+        .show-collapsed {
+            display: inline-block;
+        }
+        &.collapsed {
+            .show-expanded {
+                display: inline-block;
+            }
+            .show-collapsed {
+                display: none;
+            }
+        }
+    }
+    .read-more-list {
+        list-style-type: none;
+        li {
+            position: relative;
+            font-size: 1rem;
+            line-height: 1.25rem;
+            font-weight: 400;
+            color: $white;
+            text-align: start;
+            margin-bottom: 0.875rem;
+            span,
+            a {
+                color: $red;
+            }
+            @include media-breakpoint-down(lg) {
+                font-size: .75rem;
+                line-height: .938rem;
+            }
+        }
+    }
+    .footer {
+        background-color: $black;
+        .list-inline {
+            .list-inline-item {
+                margin-right: 0;
+                border-right: 1px solid $black-70;
+                .btn-link {
+                    font-size: .75rem;
+                    --bs-link-color: #{$yellow};
+                    --bs-link-hover-color: #{$light-grey};
+                }
+            }
+            .list-inline-item:last-child {
+                border-right: none;
+            }
+            .list-inline-item.border-right:last-child {
+                border-right: 1px solid $black-70;
+                @include media-breakpoint-down(lg) {
+                    border-right: none;
+                }
+            }
+        }
+    }
+}
+
+.pt-6 {
+    @include media-breakpoint-between(sm,
+    md) {
+        padding-top: 17.375rem!important;
+    }
+}
