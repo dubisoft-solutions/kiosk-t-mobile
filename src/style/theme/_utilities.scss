@@ -16,3 +16,9 @@ a {
         font-size: .75rem;
     }
 }
+
+.pt-6 {
+    @include media-breakpoint-between(sm, lg) {
+        padding-top: 10rem!important;
+    }
+}
