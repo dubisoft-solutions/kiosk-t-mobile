@@ -15,13 +15,13 @@
             display: block;
             position: absolute;
             top: 0;
-            background-image: url("../img/landing-img-mobile.svg");
+            background-image: url("../img/landing-img-mobile.png");
             background-position: top center;
             background-repeat: no-repeat;
             z-index: -1;
             background-size: contain;
             @include media-breakpoint-up(sm) {
-                background-image: url("../img/landing-img-desktop.svg");
+                background-image: url("../img/landing-img-desktop.png");
             }
         }
     }

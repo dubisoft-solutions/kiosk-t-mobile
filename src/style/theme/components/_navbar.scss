@@ -10,9 +10,9 @@ $navbar-height-sm: 2.938rem;
         --navbar-height: #{$navbar-height-sm};
     }
     .navbar-brand-img {
-        width: 8.375rem;
+        width: 6.25rem;
         @include media-breakpoint-down(md) {
-            width: 6.25rem;
+            width: 3.125rem;
         }
     }
     min-height: var(--navbar-height);
